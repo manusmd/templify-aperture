@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+# Aperture
 
-First, run the development server:
+**A photography-studio website template — part of the [Templify](https://github.com/manusmd) collection.**
+
+Dark, editorial, and cinematic. Built with Next.js 16 and Lenis.
+
+![Aperture — photography studio template](docs/screenshot.jpg)
+
+</div>
+
+---
+
+## Highlights
+
+- 🎞️ **Five views** — Home, Work, a project Story, Studio, Contact — with a signature **page-wipe transition**
+- 🧭 **Vertical side-nav** (desktop) / top bar + overlay (mobile), with an active-item mark
+- 🖼️ **Lightbox gallery** — keyboard driven (← → / Esc), on the project story
+- ✨ **Cursor-following work preview**, parallax, reveal-on-scroll, animated scroll cue
+- 🩶 **Editorial dark design** — Inter + monospace labels, indigo/violet accent
+- ♿ **Resilient** — fully **no-JS and reduced-motion safe** (content is never hidden behind an animation)
+- 🧩 **Content-driven** — the whole site renders from one typed file, `lib/content.ts`
+- 🌀 **Lenis smooth scroll** + a matching custom scrollbar
+- 🖼️ **`next/image`** throughout (example photography from Unsplash)
+- ⚡ **Static** — deploys to Vercel with zero configuration
+
+## A closer look
+
+| Selected work | Project story |
+| --- | --- |
+| ![Work](docs/work.jpg) | ![Story gallery](docs/story.jpg) |
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Editing content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Everything the site shows lives in one typed object: **`lib/content.ts`** — studio
+name, hero, work projects, the project story + gallery, studio, and contact.
+Change it and the site updates. Swap the Unsplash image IDs for your own frames.
 
-## Learn More
+## Deploy
 
-To learn more about Next.js, take a look at the following resources:
+Push to GitHub and import on [Vercel](https://vercel.com/new) — it's a static
+Next.js site, nothing to configure.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+lib/content.ts            Site content (typed, single source of truth)
+app/App.tsx               View state, page-wipe, lightbox, Lenis + parallax loop
+app/components/           Nav, Views (Home/Work/Story/Studio/Contact), Img
+```
 
-## Deploy on Vercel
+## Tech
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Next.js 16 · React 19 · TypeScript · Lenis · next/font · next/image
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+<div align="center">
+<sub>A Templify template. Example photography via <a href="https://unsplash.com">Unsplash</a>.</sub>
+</div>
