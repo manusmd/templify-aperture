@@ -2,17 +2,12 @@
 # else here is set once. See projects-infrastructure for the platform.
 image:
   repository: ghcr.io/manusmd/templify-aperture
-  tag: latest
+  tag: 92e294c8842c3baf046dee9a09f49131325e9d18
   pullPolicy: IfNotPresent
-
 replicas: 1
-
 port: 3000
-
 host: aperture.projects.manu-web.de
-
 certResolver: letsencrypt
-
 resources:
   requests:
     cpu: 50m
