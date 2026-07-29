@@ -1134,6 +1134,18 @@ html {
   text-transform: uppercase;
   color: var(--m4);
 }
+.footer-legal {
+  display: inline-flex;
+  gap: 18px;
+}
+.footer-legal a {
+  color: var(--m4);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+.footer-legal a:hover {
+  color: var(--acc);
+}
 
 /* ---------- Lightbox ---------- */
 .lb {
